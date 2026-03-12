@@ -25,6 +25,14 @@ evaluate:
 visualize:
 	python -m src.visualization.visualize
 
+# Run the FastAPI server
+serve:
+	python main.py
+
+# Download the BERT model weights to local cache
+download-model:
+	python -c "from transformers import pipeline; pipeline('sentiment-analysis', model='lxyuan/distilbert-base-multilingual-cased-sentiments-student', top_k=None)"
+
 # Run all: RUNS ALL SCRIPTS - DEFAULT
 all: download preprocess train test evaluate visualize
 

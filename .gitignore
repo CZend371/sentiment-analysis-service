@@ -91,3 +91,9 @@ target/
 
 # Other
 .vscode/
+
+# Virtual environment
+venv/
+
+# BERT model cache
+models/bert_cache/
